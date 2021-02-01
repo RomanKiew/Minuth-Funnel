@@ -1,0 +1,75 @@
+/* === Header === */
+#header {
+  background: gray;
+}
+.heading {
+  width: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(var(--color_0));
+}
+.heading p {
+  margin-bottom: 100px;
+}
+
+#about .bar {
+  height: 70%;
+  background: lightgray;
+  position: relative;
+}
+
+.img {
+  height: 80%;
+  left: 100px;
+  width: calc(50% - 100px);
+  top: 50%;
+  background: gray;
+}
+
+.absolute.about {
+  right: 100px;
+  width: calc(50% - 150px);
+  top: 50%;
+}
+
+.indent {
+  width: calc(100% - 50px);
+  margin-left: 50px;
+  position: relative;
+}
+
+.indent::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  left: -50px;
+  top: 1em;
+  background: rgba(var(--color_2))
+}
+
+.absolute.description {
+  top: 50%;
+  left: 50%;
+  width: calc(50% - 150px);
+  transform: translate(-50%,-50%);
+  color: rgba(var(--color_2));
+}
+
+#portfolio {
+  background: lightgray;
+}
+
+.portfolio {
+  width: calc(50% - 150px);
+  transform: translateY(50%);
+}
+
+.portfolio-img {
+  height: 56%;
+  right: 100px;
+  width: calc(50% - 100px);
+  top: 0;
+  transform: translateY(-25%);
+  background: gray;
+}
