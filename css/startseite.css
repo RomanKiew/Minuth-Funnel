@@ -9,7 +9,7 @@
   color: rgba(var(--color_0));
 }
 .heading p {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 #about .bar {
@@ -72,4 +72,14 @@
   top: 0;
   transform: translateY(-25%);
   background: gray;
+}
+
+@media (max-width: 992px) {
+  .heading {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
 }

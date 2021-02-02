@@ -118,3 +118,9 @@ section {
   color: rgba(var(--color_2));
   border: 1px solid rgba(var(--color_2));
 }
+
+@media (max-width: 1200px) {
+.wrapper {
+    width: calc(100% - 150px) !important;
+}
+}
