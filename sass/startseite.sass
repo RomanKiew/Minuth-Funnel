@@ -1,0 +1,92 @@
+@import 'color'
+@import 'variables'
+
+#header
+  background: gray
+
+.heading
+  width: 50%
+  top: 50%
+  transform: translateY(-50%)
+  color: $color_0
+
+  p
+    margin-bottom: 50px
+
+#about .bar
+  height: 70%
+  background: lightgray
+  position: relative
+
+.img
+  height: 80%
+  left: 100px
+  width: calc(50% - 100px)
+  top: 50%
+  background: gray
+
+.absolute.about
+  right: 100px
+  width: calc(50% - 150px)
+  top: 50%
+
+.indent
+  width: 100%
+  margin-left: 50px
+  position: relative
+
+  &::before
+    content: ""
+    position: absolute
+    width: 40px
+    height: 2px
+    left: -50px
+    top: 1em
+    background: $color_2
+
+.absolute.description
+  top: 50%
+  left: 50%
+  width: calc(50% - 150px)
+  transform: translate(-50%, -50%)
+  color: $color_2
+
+#portfolio
+  background: lightgray
+
+.portfolio
+  width: calc(50% - 150px)
+  transform: translateY(50%)
+
+.portfolio-img
+  height: 56%
+  right: 100px
+  width: calc(50% - 100px)
+  top: 0
+  transform: translateY(-25%)
+  background: gray
+
+@media (max-width: 1200px)
+  $margin: 150px
+  .heading
+    width: calc(50% - #{$margin}) !important
+
+  .img
+    left: ($margin / 2)
+
+  .portfolio-img
+    right: ($margin / 2)
+
+  .portfolio
+    width: calc(50% - 75px)
+
+
+  .absolute.description
+    left: 75px
+    transform: translate(0%, -50%)
+
+@media (max-width: 992px)
+  .heading
+    width: calc(100% - 150px) !important
+
+@media (max-width: 768px)
