@@ -30,8 +30,11 @@
   width: calc(50% - 150px)
   top: 50%
 
+  p
+    margin-bottom: 50px
+
 .indent
-  width: 100%
+  width: calc(100% - 50px)
   margin-left: 50px
   position: relative
 
@@ -55,7 +58,7 @@
   background: lightgray
 
 .portfolio
-  width: calc(50% - 150px)
+  width: calc(50% - 50px)
   transform: translateY(50%)
 
 .portfolio-img
@@ -63,30 +66,140 @@
   right: 100px
   width: calc(50% - 100px)
   top: 0
-  transform: translateY(-25%)
+  transform: translateY(-40%)
   background: gray
 
 @media (max-width: 1200px)
   $margin: 150px
   .heading
-    width: calc(50% - #{$margin}) !important
+    width: calc(60%) !important
 
   .img
     left: ($margin / 2)
+    height: 270px
+    width: 405px
 
   .portfolio-img
     right: ($margin / 2)
+    height: 270px
+    width: 405px
 
   .portfolio
     width: calc(50% - 75px)
 
+  .absolute.about
+    right: 75px
+    width: calc(50% - 100px)
 
   .absolute.description
-    left: 75px
-    transform: translate(0%, -50%)
+      width: calc(50% - 100px)
+      left: ($margin / 2)
+      transform: translate(0%, -50%)
+
+  .portfolio
+      width: calc(50% - 25px)
+
 
 @media (max-width: 992px)
+  $margin: 100px
   .heading
-    width: calc(100% - 150px) !important
+    width: calc(100% - #{$margin}) !important
+
+  #about
+    .bar
+      height: 50%
+
+  .img
+    left: ($margin / 2)
+    height: 215px
+    width: 345px
+
+  .portfolio-img
+    right: ($margin / 2)
+    height: 215px
+    width: 345px
+
+  .portfolio
+    width: calc(50% + 100px)
+    transform: translateY(80%)
+
+  .absolute.about
+    right: ($margin / 2)
+    width: calc(50% - 100px)
+
+  .absolute.description
+    width: 50%
+    left: ($margin / 2)
+    transform: translate(0%, -50%)
+
+  .indent
+    margin-left: 0
+    width: 100%
+
+    &::before
+      width: 0px
 
 @media (max-width: 768px)
+  $margin: 50px
+  .heading
+    width: calc(100% - #{$margin}) !important
+
+  .img
+    left: 50%
+    transform: translateX(-50%)
+    height: 350px
+    width: 525px
+    top: 20%
+
+  .absolute.about
+    right: ($margin / 2)
+    width: calc(100% - 50px)
+    top: 150%
+
+  .absolute.description
+    text-align: right
+    width: calc(100% - #{$margin})
+    left: ($margin / 2)
+    transform: translate(0%, -50%)
+    top: 65%
+
+  .portfolio-img
+    left: 50%
+    height: 350px
+    width: 525px
+    transform: translate(-50%, -20%)
+
+  .portfolio
+    display: flex
+    justify-content: flex-end
+    flex-direction: column
+    margin-bottom: 20px
+    width: 100%
+    transform: translateY(0%)
+
+  #portfolio
+    .wrapper
+      display: flex
+      justify-content: flex-end
+
+
+@media (max-width: 576px)
+  $margin: 20px
+  .heading
+    width: calc(100% - #{$margin}) !important
+    position: relative
+    top: auto
+    transform: translateY(0%)
+
+  .img
+    left: 50%
+    transform: translateX(-50%)
+    height: calc(67vw - 20px)
+    width: calc(100vw - 20px)
+    top: 20%
+
+  .portfolio-img
+    left: 50%
+    height: calc(67vw - 20px)
+    width: calc(100vw - 20px)
+    transform: translate(-50%, -20%)
