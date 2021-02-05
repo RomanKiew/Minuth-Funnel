@@ -7,12 +7,13 @@ function slide(event){
     document.querySelectorAll('.next').forEach(item => {
         item.addEventListener('click', event => {
             if (counter === x + 1) {
+                document.getElementById('field' + counter).style.display = "none";
                 counter = x + 1;
-                document.getElementById('schritt' + counter).style.display = "block";
+                document.getElementById('field' + counter).style.display = "block";
             } else {
-                document.getElementById('schritt' + counter).style.display = "none";
+                document.getElementById('field' + counter).style.display = "none";
                 counter++;
-                document.getElementById('schritt' + counter).style.display = "block";
+                document.getElementById('field' + counter).style.display = "block";
             };
         });
     });
