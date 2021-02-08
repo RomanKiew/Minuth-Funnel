@@ -13,6 +13,32 @@ for(i=0;i<l;i++) {
   })
 }
 
+let box = document.querySelectorAll('.slide');
+let s = box.length;
+
+for (j = 0; j < s; j++) {
+  box[j].addEventListener('click', ()=> {
+    const x = document.querySelectorAll('.element').length;
+
+    let counter = 1;
+    var y = document.querySelectorAll('.next');
+
+    document.querySelectorAll('.next').forEach(item => {
+        item.addEventListener('click', event => {
+            if (counter === x + 1) {
+                document.getElementById('field' + counter).style.display = "none";
+                counter = x + 1;
+                document.getElementById('field' + counter).style.display = "block";
+            } else {
+                document.getElementById('field' + counter).style.display = "none";
+                counter++;
+                document.getElementById('field' + counter).style.display = "block";
+            };
+        });
+    });
+  })
+}
+
 </script>
 <?php wp_footer(); ?>
 </body>
